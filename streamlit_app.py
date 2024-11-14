@@ -5,7 +5,7 @@ st.title('🎈 MachineLearning App')
 
 st.info('This is app builds a machine leaning model!')
 
-with set.expander('Data'):
+with st.expander('Data'):
   st.write('**Raw Data**')
   data = pd.read_csv("https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv")
   data
