@@ -53,6 +53,93 @@ encode = ['species', 'island']
 data_penguins = pd.get_dummies(input_penguins)
 
 
+import streamlit as st
+import pandas as pd
+import numpy as np
+
+# Set page configuration
+st.set_page_config(
+    page_title="Beautiful Streamlit App",
+    page_icon="✨",
+    layout="wide",
+)
+
+# Sidebar
+st.sidebar.title("Navigation")
+pages = ["Home", "Data", "Visualize", "About"]
+page = st.sidebar.radio("Select a page:", pages)
+
+st.sidebar.write("---")
+st.sidebar.write("This is a beautiful Streamlit app. Enjoy exploring!")
+
+# Custom style
+st.markdown(
+    """
+    <style>
+    .main {
+        background-color: #f0f0f5;
+    }
+    .sidebar .sidebar-content {
+        background-color: #282828;
+        color: #f0f0f5;
+    }
+    .stButton>button {
+        background-color: #008CBA;
+        color: white;
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
+    .stButton>button:hover {
+        background-color: #005f6b;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+if page == "Home":
+    st.title("Welcome to the Beautiful Streamlit App ✨")
+    st.write("This app demonstrates how to create a beautiful and interactive web app using Streamlit.")
+    st.image("https://source.unsplash.com/800x400/?nature,water")  # Sample image from Unsplash
+
+elif page == "Data":
+    st.title("Data Section")
+    st.write("Here you can view and explore the dataset.")
+    
+    # Sample data
+    data = pd.DataFrame({
+        'A': np.random.rand(100),
+        'B': np.random.rand(100),
+        'C': np.random.rand(100),
+    })
+    
+    st.dataframe(data)
+
+elif page == "Visualize":
+    st.title("Visualization Section")
+    st.write("Here you can create beautiful visualizations.")
+    
+    chart_data = pd.DataFrame(
+        np.random.randn(20, 3),
+        columns=['a', 'b', 'c']
+    )
+    
+    st.line_chart(chart_data)
+
+elif page == "About":
+    st.title("About This App")
+    st.write("This app is built with Streamlit to demonstrate how to create beautiful and interactive web applications.")
+    st.write("Feel free to explore and customize the code to make it your own!")
+
+# Footer
+st.markdown(
+    """
+    <footer style="text-align:center; padding:10px; position:fixed; bottom:0; width:100%; background-color:rgba(0, 140, 186, 0.9); color:white;">
+    Built with ❤️ using Streamlit
+    </footer>
+    """,
+    unsafe_allow_html=True,
+)
 
 
 
