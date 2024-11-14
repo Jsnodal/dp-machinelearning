@@ -1,4 +1,4 @@
-# 📦 Streamlit App Starter Kit 
+# 📦 dp ml web app
 ```
 ⬆️ (Replace above with your app's name)
 ```
