@@ -45,12 +45,12 @@ with st.sidebar:
 
 with st.expander('Input features'):
   st.write('**Input penguin**')
-  input_df
-  st.write('**combinedpenguins data**')
+  input_data
+  st.write('**combined penguins data**')
   input_penguins
 
 encode = ['island','gender']
-data_penguina =pd.get_dummies(input_penguins, prefix = encode)
+data_penguins =pd.get_dummies(input_penguins, prefix = encode)
 
 
 
