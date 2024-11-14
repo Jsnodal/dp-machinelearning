@@ -53,9 +53,7 @@ encode = ['species', 'island']
 data_penguins = pd.get_dummies(input_penguins)
 
 
-import streamlit as st
-import pandas as pd
-import numpy as np
+ 
 
 # Set page configuration
 st.set_page_config(
