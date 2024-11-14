@@ -1,1 +1,8 @@
-streamlit>=1.26.0
+streamlit 
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+tensorflow
+joblib
